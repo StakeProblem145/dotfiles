@@ -1,0 +1,142 @@
+""" Map leader to space ---------------------
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+
+""" Plugins
+set NERDTree
+set highlightedyank
+" set commentary
+" set surround
+
+""" Settings
+set number
+set relativenumber
+set showmode
+set showmodewidget
+" set wrapscan
+set clipboard+=unnamedplus
+set ignorecase
+set smartcase
+
+" Highlight search
+set hlsearch
+set incsearch
+nnoremap <C-R> :nohls<CR>
+
+" Which key settings
+set which-key
+set notimeout
+
+" Recommended ideavim settings
+set ideajoin
+set ideaput
+set ideamarks
+
+" Keybinds
+nnoremap <C-u> <C-u>zz
+nnoremap <C-d> <C-d>zz
+
+nnoremap <n> nzzzv
+nnoremap <N> Nzzzv
+
+noremap H ^
+noremap L $
+
+" Move line up or down
+nmap <C-DOWN> :m +1<CR>
+nmap <C-UP> :m -2<CR>
+
+" NERDTree
+nmap <Leader>e :NERDTreeFocus<CR>
+let g:NERDTreeMapActivateNode="l"
+let g:NERDTreeMapCloseDir="h"
+
+" Tab navigation keymaps
+nmap ]b gt
+nmap [b gT
+
+" Window navigation keymaps
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
+nmap <Leader>ws :vsplit<CR>
+nmap <Leader>wl <Action>(MoveEditorToOppositeTabGroup)
+nmap <Leader>wd :q<CR>
+nmap <leader>ww <Action>(HideAllWindows)
+
+" GoTo
+nmap ]e <Action>(GotoNextError)
+nmap [e <Action>(GotoPrevError)
+nmap ]g <Action>(VcsShowNextChangeMarker)
+nmap [g <Action>(VcsShowPrevChangeMarker)
+
+" Other Windows
+nmap <Leader>ff <Action>(SearchEverywhere)
+nmap <Leader>wg <Action>(ActivateVersionControlToolWindow)
+nmap <Leader>wc <Action>(ActivateCommitToolWindow)
+nmap <Leader>t  <Action>(ActivateTerminalToolWindow)
+nmap <Leader>al :actionlist<space>
+
+" Code navigation keymaps
+nmap gb <Action>(Back)
+nmap <C-o> <Action>(Back)
+nmap gf <Action>(Forward)
+nmap <C-t> <Action>(Forward)
+nmap gd <Action>(GotoDeclaration)
+nmap gu <Action>(FindUsages)
+nmap gl <Action>(ShowErrorDescription)
+nnoremap g; :action JumpToLastChange<Enter>
+nnoremap g, :action JumpToNextChange<Enter>
+
+" Perform actions in code
+nmap <Leader>ca <Action>(ShowIntentionActions)
+nmap <Leader>cr <Action>(RenameElement)
+nmap <Leader>cf <Action>(ReformatCode)
+nmap <Leader>cg <Action>(Generate)
+vmap <Leader>cv <Action>(IntroduceVariable)
+vmap <Leader>cm <Action>(ExtractMethod)
+nmap <Leader>cs <Action>(ChangeSignature)
+
+" New File
+nmap <Leader>ns <Action>(NewScratchFile)
+nmap <Leader>nf <Action>(NewFile)
+
+" Git
+nmap <leader>gg <action>(Git.Menu)
+nmap <leader>gu <action>(Vcs.UpdateProject)
+nmap <leader>gc <action>(CheckinProject)
+
+" Run commands
+nmap <Leader>rc <Action>(RunClass)
+nmap <Leader>rl <Action>(Run)
+nmap <Leader>rd <Action>(Debug)
+nmap <Leader>rs <Action>(RunDebug)
+
+" Debug
+nmap <Leader>db <Action>(ToggleLineBreakpoint)
+nmap <Leader>de <Action>(EditBreakpoint)
+
+
+" Save current file with C-s
+nmap <C-s> :w<CR>
+
+" Selects all editor content
+nnoremap <C-A> gg<S-v>G
+
+" Bookmarks
+nmap mm <Action>(ToggleBookmark)
+nmap ms <Action>(ShowBookmarks)
+nmap <Leader>mm <Action>(ActivateBookmarksToolWindow)
+
+" File Structure
+nmap <leader>ms <Action>(FileStructurePopup)
+
+" Context menu / right click
+nmap <leader>rr <Action>(ShowPopupMenu)
+
+
+map <Leader>pf <action>(com.mituuz.fuzzier.Fuzzier)
+map <Leader>mf <action>(com.mituuz.fuzzier.FuzzyMover)
+map <Leader>gf <action>(com.mituuz.fuzzier.FuzzierVCS)
+map <Leader>ff <action>(com.mituuz.fuzzier.FuzzyGrep)
