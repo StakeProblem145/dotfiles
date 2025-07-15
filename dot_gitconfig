@@ -1,0 +1,16 @@
+[user]
+	name = StakeProblem145
+	email = 82023426+StakeProblem145@users.noreply.github.com
+[core]
+	autocrlf = input
+[pull]
+	rebase = true
+[color]
+	ui = auto
+[init]
+	defaultBranch = main
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
