@@ -45,6 +45,7 @@ curl -sS https://starship.rs/install.sh | sh
 ```
 
 ### Fonts
+https://www.nerdfonts.com/
 
 ```
 mkdir -p ~/.local/share/fonts/tmp
@@ -66,4 +67,18 @@ then use GNU stow to create symlinks
 
 ```
 $ stow .
+```
+
+## Packages
+
+List of packages I probably always need installed
+
+```
+docker
+terraform
+az
+fd-find
+fzf
+jq
+ripgrep
 ```
