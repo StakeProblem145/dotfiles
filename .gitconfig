@@ -1,0 +1,23 @@
+[user]
+	name = 'Lukas Stake'
+	email = 82023426+StakeProblem145@users.noreply.github.com
+[core]
+	editor = vim
+	autocrlf = input
+[pull]
+	rebase = true
+[color]
+	ui = auto
+[init]
+	defaultBranch = main
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[push]
+	autoSetupRemote = true
+[rebase]
+	autoStash = true
+[alias]
+	undo = reset --soft HEAD~1
