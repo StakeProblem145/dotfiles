@@ -44,6 +44,15 @@ https://starship.rs/
 curl -sS https://starship.rs/install.sh | sh
 ```
 
+### Fonts
+
+```
+mkdir -p ~/.local/share/fonts/tmp
+cd ~/.local/share/fonts && curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz
+tar -xf JetBrainsMono.tar.xz -C tmp
+mv tmp/JetBrainsMonoNLNerdFontMono-* .
+```
+
 ## Installation
 
 First, check out the dotfiles repo in your $HOME directory using git
