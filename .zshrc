@@ -24,3 +24,15 @@ bindkey '^[[B' down-line-or-beginning-search # Down arrow
 eval "$(starship init zsh)"
 
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+
+alias nvimconf='nvim ~/.config/nvim'
+
+# Always work in a tmux session if Tmux is installed
+if which tmux 2>&1 >/dev/null; then
+  if [ $TERM != "screen-256color" ] && [  $TERM != "screen" ]; then
+    tmux attach -t default || tmux new -s default; exit
+  fi
+fi
+
+alias la='ls -la'
