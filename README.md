@@ -44,6 +44,18 @@ https://starship.rs/
 curl -sS https://starship.rs/install.sh | sh
 ```
 
+### tmux
+```
+sudo apt install tmux
+```
+
+### nvim
+```
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
+sudo rm -rf /opt/nvim-linux-x86_64
+sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
+```
+
 ### Fonts
 https://www.nerdfonts.com/
 
