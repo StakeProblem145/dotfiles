@@ -15,8 +15,8 @@ vim.o.showmode = false
 
 -- Sync clipboard between OS and Neovim.
 vim.schedule(function()
-  vim.o.clipboard = 'unnamedplus'
-end) 
+  vim.o.clipboard = "unnamedplus"
+end)
 
 -- Enable break indent
 vim.o.breakindent = true
@@ -29,7 +29,7 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 
 -- Keep signcolumn on by default
-vim.o.signcolumn = 'yes'
+vim.o.signcolumn = "yes"
 
 -- Decrease update time
 vim.o.updatetime = 250
@@ -44,10 +44,10 @@ vim.o.splitbelow = true
 -- Show helpful text indicators
 vim.o.list = true
 
-vim.opt.listchars = { trail = '·', nbsp = '␣' }
+vim.opt.listchars = { trail = "·", nbsp = "␣" }
 
 -- Preview substitutions live, as you type!
-vim.o.inccommand = 'split'
+vim.o.inccommand = "split"
 
 -- Show which line your cursor is on
 vim.o.cursorline = true
@@ -59,12 +59,10 @@ vim.o.scrolloff = 10
 vim.o.confirm = true
 
 -- tabs are converted to spaces
-vim.o.expandtab = true
 vim.o.tabstop = 2
+vim.o.expandtab = true
 vim.o.shiftwidth = 2
 
-
-
 -- Config files
-require 'lazy-bootstrap'
-require 'keymap'
+require("lazy-bootstrap")
+require("keymap")

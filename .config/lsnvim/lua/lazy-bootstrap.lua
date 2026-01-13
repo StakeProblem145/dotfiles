@@ -14,8 +14,10 @@ local rtp = vim.opt.rtp
 rtp:prepend(lazypath)
 
 require('lazy').setup({
-  {import = "plugins"}
-},{
+  { import = "plugins" }
+}
+  ,{
+  -- neat icons for lazy
   ui = {
     icons = vim.g.have_nerd_font and {} or {
       cmd = '⌘',
@@ -32,7 +34,8 @@ require('lazy').setup({
       task = '📌',
       lazy = '💤 ',
     },
-  },
-})
+   },
+  }
+)
 
 -- vim: ts=2 sts=2 sw=2 et
