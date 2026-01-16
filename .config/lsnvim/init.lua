@@ -15,7 +15,7 @@ vim.o.showmode = false
 
 -- Sync clipboard between OS and Neovim.
 vim.schedule(function()
-  vim.o.clipboard = "unnamedplus"
+	vim.o.clipboard = "unnamedplus"
 end)
 
 -- Enable break indent
@@ -59,9 +59,10 @@ vim.o.scrolloff = 10
 vim.o.confirm = true
 
 -- tabs are converted to spaces
-vim.o.tabstop = 2
-vim.o.expandtab = true
-vim.o.shiftwidth = 2
+vim.o.tabstop = 2 -- A TAB character looks like 2 spaces
+vim.o.expandtab = true -- Pressing the TAB key will insert spaces instead of a TAB character
+vim.o.softtabstop = 2 -- Number of spaces inserted instead of a TAB character
+vim.o.shiftwidth = 2 -- Number of spaces inserted when indenting
 
 -- Config files
 require("lazy-bootstrap")

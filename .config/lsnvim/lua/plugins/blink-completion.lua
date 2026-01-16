@@ -4,6 +4,9 @@ return {
   event = 'VimEnter',
   -- optional: provides snippets for the snippet source
   dependencies = { 'rafamadriz/friendly-snippets' },
+  cond = function()
+    return not vim.g.vscode
+  end,
 
   -- use a release tag to download pre-built binaries
   version = '1.*',
